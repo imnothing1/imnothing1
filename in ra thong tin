@@ -1,0 +1,65 @@
+#include<iostream>
+using namespace std;
+
+struct Cat {
+	char Mine[100];
+	char color[100];
+	char name[100];
+	int old ;
+	char address[100];
+};
+void getInfor(Cat& c){
+	cout << " Mine : " ;
+	cin.getline(c.Mine,99);
+	cout << " Name : " ;
+	cin.getline(c.name,99) ;
+	cout << " Old : " ;
+	cin >> c.old;
+	cout << " Color : ";
+	cin >> c.color;
+	cout << " address : " ;
+	cin.ignore();
+	cin.getline(c.address,99);
+	
+}
+void getInfor2(Cat* c){
+	cout << " Mine : " ;
+	cin.getline(c->Mine,99);
+	cout << " Name : " ;
+	cin.getline(c->name,99) ;
+	cout << " Old : " ;
+	cin >> c->old;
+	cout << " Color : ";
+	cin >> c->color;
+	cout << " address : " ;
+	cin.ignore();
+	cin.getline(c->address,99);
+}
+void showInfor(Cat c){
+	cout <<"           My Cat         \n" ;
+	cout << " Name :  " << c.name << endl;
+	cout << " Old  : "  << c.old << endl;
+	cout << " address : " << c.address << endl;
+	cout << " Color : " << c.color << endl;
+	cout << " Mine : " << c.Mine << endl;
+	cout << "          <3       \n" ;
+}
+void showInfor2(Cat* c){
+	cout <<"           My Cat         \n" ;
+	cout << " Name :  " << c->name << endl;
+	cout << " Old  : "  << c->old << endl;
+	cout << " address : " << c->address << endl;
+	cout << " Color : " << c->color << endl;
+	cout << " Mine : " << c->Mine << endl;
+	cout << "          <3       \n" ;
+}
+int main () {
+	Cat c;
+	Cat* cptr ;
+	cptr = &c ;
+	getInfor2(cptr);
+	showInfor2(cptr);
+	
+	delete cptr;
+	return 0;
+}
