@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	long sum = 0;
+	long x = 1;
+	cout <<"Nhap so tu nhien n" << endl;
+	cin >> n ;
+	for ( size_t i = 1 ; i <= n ; i++){
+	    x *= i;
+	    sum += x;
+	}
+	cout << " Sum " << sum << endl;
+	return 0;
+}
