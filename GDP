@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<iostream>
+int main (){
+	float  a,b;
+	double GDP  ;
+	int nam = 2014 ;
+	printf (" Nhap GDP nam 2014 : ") ;
+  	scanf("%f",&a);
+	printf (" Nhap toc do tang truong : " );
+ 	scanf("%f",&b);
+ 	GDP = a;
+  	printf ("Nam\tGDP\n2014\t%f\n",GDP)  ;
+	while ( GDP <= 2*a){
+		GDP = GDP + (GDP*b/100);
+		nam = nam + 1;
+		printf("%d\t%.2f\n",nam,GDP);
+	}
+	return 0;
+}
