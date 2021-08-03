@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	cout << "Nhap so tu nhien n" << endl;
+	cin >> n ;
+	
+	if ( n < 0){
+		cout << " Vui long thu lai" << endl;
+	}
+	else {
+		cout << "So chan nho hon n : \n" ;
+		for (size_t i= 0 ; i <n ; i += 2 ){
+			cout << i << endl;
+		}
+			cout << "So le nho hon n : \n" ;
+		for (size_t i= 1 ; i <n ; i += 2 ){
+			cout << i << endl;
+		}
+	}
+	return 0;
+}
