@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<math.h>
+
+int main (){
+	float a,b,c;
+	printf ("vui long Nhap 3 canh a , b , c : \n");
+	scanf ("%f%f%f",&a ,&b ,&c);
+	if (a >0 && b > 0 && c > 0){
+		if ( a < b + c && b < c + a && c < b + a){
+			if ( a == b == c ){
+				printf ("tam giac tao boi a b c la tam giac deu  ");
+			}
+			else if ( a*a + b*b == c*c ||  b*b + c*c ==a*a || a*a + c*c == b*b  ){
+				printf ("Tam giac tao boi a b c tam giac vuong ");
+			}
+			else if ((a*a + b*b == c*c ||  b*b + c*c ==a*a || a*a + c*c == b*b) && (a == b || b == c || c == a)){
+				printf ("Tam giac tao boi a b c la tam giac vuong can  ");
+			}
+			else if ( a == b || b == c || c == a ){
+				printf ("Tam giac tao boi a b c la tam giac can");
+			}
+			else {
+				printf ("Tam giac tao boi a b c la tam giac thuong ");
+			}
+		}
+		else {
+			printf ("Ba so a b c khong tao thanh 1 tam giac ");
+	}
+	}
+	else {
+		printf ("Vui long nhap a , b , c > 0");
+	}
+	
+	return 0;
+}
