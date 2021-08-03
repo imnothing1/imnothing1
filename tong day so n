@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	long sum = 0, sum1 = 0 , sum2 =0;
+	cout <<"Nhap so tu nhien n" << endl;
+	cin >> n ;
+	for ( size_t i = 0 ; i < n ; i++){
+		sum += i;
+		if ( i % 2 == 0){
+			sum1 +=i;
+		}
+		else {
+			sum2 +=i;
+		}
+	}
+	cout << "tong cac so :" << sum << endl;
+	cout << "tong cac so chan :" << sum1 << endl;
+	cout << "tong cac so le :" << sum2 << endl;
+	return 0;
+}
