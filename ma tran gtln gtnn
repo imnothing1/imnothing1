@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    float a[50][50], x, max, min;
+    int i, j, n, m;
+
+    printf("Nhap so hang ma tran A: ");
+    scanf("%d", &n);
+    printf("Nhap so cot ma tran A: ");
+    scanf("%d", &m);
+
+    for(i=0; i<n; i++)
+        for(j=0; j<m; j++)
+        {
+            printf("Nhap a[%d][%d]: ", i, j);
+            scanf("%f", &x);
+            a[i][j]=x;
+        }
+    printf("\nMa tran A:\n");
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<m; j++)
+            printf("%6.0f", a[i][j]);
+        printf("\n");
+    }
+    max = min = a[0][0];
+    for(i=0; i<n; i++)
+        for(j=0; j<m;j++)
+        {
+            if(max<a[i][j])
+                max = a[i][j];
+            if(min>a[i][j])
+                min = a[i][j];
+        }
+    printf("Max = %0.0f, Min = %0.0f", max, min);
+    getch();
+}
